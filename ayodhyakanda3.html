@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BALAKANDA</title>
+    <style>
+        body{
+            margin: 20px 20px 20px 20px;
+            background-image: url("https://i.pinimg.com/originals/31/9f/3b/319f3b9659e2add93c75329770406f49.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.2em;
+            font-size: 3em;
+        }
+        .balakanda {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 6px solid black;
+            border-radius: 25px;
+        }
+        .video{
+            float:right;
+            margin-right: 0.9rem;
+        }
+        .glassy-text {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            color: #000000;
+            font-family: system-ui, sans-serif;
+            line-height: 1.5;
+            max-width: 87%;
+            padding: 1rem 2rem;
+            font-size: 20PX;
+            text-align: justify;
+        }
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        .glassy-text {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(15px);
+          background-color: transparent;
+        }
+        }
+        .languages{
+            float: right;
+            font-size: 17px;
+            border-radius: 15px;
+            opacity: 0.7;
+        }
+        .language{
+            float: right;
+            font-size: 17px;
+        }
+        .next{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: right;
+        }
+        .prev{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: left;
+        }
+        #speakButton{
+            background-color:transparent;
+            border-color: transparent;
+            float:right;
+        }
+        #close{
+            background-color:transparent;
+            border-color: transparent;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <img class="center" src="https://i.pinimg.com/originals/79/3b/3d/793b3d63af94dbf06bb831820119b88f.png" height="90px" width="380px">
+    <button id="speakButton"><img src="https://img.icons8.com/ios-filled/256/high-volume.png" height="40px" width="40px"></button>
+    <a href="newpage.html"><button id="close"><img src="https://img.icons8.com/ios-glyphs/256/macos-close.png" height="40px" width="40px"></button></button></a>
+    <script>
+        function speakSelectedText() {
+          const selectedText = window.getSelection().toString();
+          const lang = detectLanguage(selectedText);
+          const processedText = processSelectedText(selectedText);
+          const speech = new SpeechSynthesisUtterance(processedText);
+          speech.lang = lang;
+          window.speechSynthesis.speak(speech);
+        }
+      
+        function detectLanguage(text) {
+          // Use a language detection library or API to detect the language of the text
+          // Return the language code for the detected language
+          return 'IN-en';
+        }
+      
+        function processSelectedText(selectedText) {
+          // Process the selected text and return the result as a string
+          return selectedText.toUpperCase();
+        }
+      
+        const speakButton = document.getElementById('speakButton');
+        speakButton.addEventListener('click', speakSelectedText);
+      </script>
+    <br><br><br><br>
+    <select name="languages" class="languages" onchange="location = this.value;"> 
+        <option value="ayodhyakanda3.html">English</option> 
+        <option value="ayodhyakanda6.html">Telugu</option>
+    </select> 
+    <label class="language">Choose a language:</label>
+    <br>
+    <br>
+    <center>
+        <div class="glassy-text">
+            <p id="siteContent" style="font-weight: bold;">
+                Guhudu came to know all this through spies. Sumantra realized through Guhu. Sumantra He took leave from Guhudi and went to Ayodhya. Dasharatha learned about Rama through Sumantra. There is no end to the agony of the Kausalya Dasaraths. Dasharatha remembers the past incident where he mistakenly killed Munibalak and the curse given by his parents. That is the reason for the divorce. The heart of Sri Rama was disturbed by the departure of Dasharatha and his heart became cold because he could not bear the grief. Dasharatha passed away after midnight. Everyone is good.
+Dasharatha's body was preserved in an oil tank. At the behest of Vasishtha, the messengers went to bring Bharata Shatrughnu. After traveling for seven days, Bharata Shatrughnu reached Ayodhya on the eighth day. Bharata was shocked by the death of his father. Bharata performed the last rites of his father.
+Bharata blamed his mother for the exile of Sri Rama. Shatrughna, who was eager to kill Manthara, stopped hearing Bharata's words. The ministers asked Bharatun to take over the kingship. But Bharata did not agree. 'Sri Rama, the elder, should be the king. Instead of him I will exile for fourteen years. Prepare Chaturanga forces. I will go and bring Sri Rama to Ayodhya' he said.
+<br><br>
+Bharata left with the people of Ayodhya. Joined Sringiberapuram. The cave did not know Bharata's heart and prepared for war. When Tira came to know the matter, he went ahead and invited Bharatu. With the help of Guhu, Bharata reached Bharadwajashram. Maharshi Satkaralanandi traveled towards Chitrakoot.
+In the forest, the animals started to stir. Sri Rama and Lakshmana went to see the reason. Immediately Lakshmana made a big mud tree. Got it. He got down from the tree and came to Sri Rama. 'Bharat is coming as an army with evil mind. Mannadu Lakshmana has prepared our dhanurbanas. Sri Rama says that there is a mistake in Lakshmana's thinking. He is not like Bharata. 'Lakshmana! If you have a desire for a kingdom, tell Bharata and he will give that kingdom to you,' he said. Meanwhile, Bharata reached Parnashala. He could not stop his grief when he saw Sri Rama. Shatrughna fell on Lord Rama's feet. Tears fell from Sri Rama's eyes. He calmed down after a while. Bharatunni asked Kusala questions. He preached the virtues of politics. Shri Ram heard the news of his father's death and lamented. Bharata politely prayed for Lord Rama to come to Ayodhya and for the king to come. But Sri Rama is the head of the father. Did not agree. Convinced Shri Ram to atheism. to trace He was the priest of Dasharatha. But Sri Rama refuted Jabali's argument.
+As per Bharata's request, Lord Rama blessed Padukas. Then Bharata said 'Anna! I will place the burden of governance on these foundations. For these fourteen years I too shall be outside the city, wearing jattas, wearing linen, and with the rules of banishment. He said, "If you don't see me in the fourteenth year, fire will enter." Sri Rama said ok. This is ideal brotherhood. Bharata reached Nandigram and crowned the Padukas.
+<br><br>
+Sri Rama went to Atri Maharshi's ashram along with Sita Lakshmana. Atri Anasuya gave them appropriate courtesy. Anasuya Devi who was Mahapativrata gave divine clothes to Sita. Sita Rama Lakshmana took the blessings of Munishwar and entered Dandakaranyam.
+
+            </p>
+        </div>
+    </center>
+    <br>
+    <a href="ayodhyakanda2.html"><button class="prev">Previous</button></a>
+    <br>
+</body>
+</html>

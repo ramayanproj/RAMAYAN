@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BALAKANDA</title>
+    <style>
+        body{
+            margin: 20px 20px 20px 20px;
+            background-image: url("https://i.pinimg.com/originals/31/9f/3b/319f3b9659e2add93c75329770406f49.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.2em;
+            font-size: 3em;
+        }
+        .balakanda {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 6px solid black;
+            border-radius: 25px;
+        }
+        .video{
+            float:right;
+            margin-right: 0.9rem;
+        }
+        .glassy-text {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            color: #000000;
+            font-family: system-ui, sans-serif;
+            line-height: 1.5;
+            max-width: 87%;
+            padding: 1rem 2rem;
+            font-size: 20PX;
+            text-align: justify;
+        }
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        .glassy-text {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(15px);
+          background-color: transparent;
+        }
+        }
+        .languages{
+            float: right;
+            font-size: 17px;
+            border-radius: 15px;
+            opacity: 0.7;
+        }
+        .language{
+            float: right;
+            font-size: 17px;
+        }
+        .next{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: right;
+        }
+        .prev{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: left;
+        }
+        #speakButton{
+            background-color:transparent;
+            border-color: transparent;
+            float:right;
+        }
+        #close{
+            background-color:transparent;
+            border-color: transparent;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <img class="center" src="https://i.pinimg.com/originals/7f/97/f3/7f97f32d8cbd7f89828f1f791daf5e08.png" height="90px" width="380px">
+    <br>
+    <button id="speakButton"><img src="https://img.icons8.com/ios-filled/256/high-volume.png" height="40px" width="40px"></button>
+    <a href="newpage.html"><button id="close"><img src="https://img.icons8.com/ios-glyphs/256/macos-close.png" height="40px" width="40px"></button></button></a>
+    <script>
+        function speakSelectedText() {
+            const selectedText = window.getSelection().toString();
+            const lang = detectLanguage(selectedText);
+            const processedText = processSelectedText(selectedText);
+            const speech = new SpeechSynthesisUtterance(processedText);
+            speech.lang = lang;
+            window.speechSynthesis.speak(speech);
+          }
+          
+          function detectLanguage(text) {
+            // Use a language detection library or API to detect the language of the text
+            // Return the language code for the detected language
+            return 'te-IN'; // Use 'te-IN' for Telugu
+          }
+          
+          function processSelectedText(selectedText) {
+            // Process the selected text and return the result as a string
+            return selectedText.toUpperCase();
+          }
+          
+          const speakButton = document.getElementById('speakButton');
+          speakButton.addEventListener('click', speakSelectedText);
+          </script>
+    <br><br><br><br>
+    <select name="languages" class="languages" onchange="location = this.value;">  
+        <option value="balakanda8.html">Telugu</option> 
+        <option value="balakanda2.html">English</option>
+    </select> 
+    <label class="language">Choose a language:</label>
+    <br>
+    <br>
+    <center>
+        <div class="glassy-text">
+            <p id="siteContent" style="font-weight: bold;">
+                తరువాత దశరథుడు ఋష్యశృంగుని పుత్రుని పొందుటకు చేయవలసిన కర్మ గురించి అడిగాడు. ఋష్యశృంగునిపై భారం వేసాడు. దశరథుని కోరికను మన్నించి, ఋష్యశృంగుడు 'పుత్రకామేష్టి' అనే యాగాన్ని ప్రారంభించాడు. హవిస్సుకు స్వాగతం పలికేందుకు యజ్ఞశాలలో బ్రహ్మదేవులు, గంధర్వులు, సిద్ధులు, మహర్షులు ప్రత్యక్షమయ్యారు.
+అదే సమయంలో దేవతలందరూ బ్రహ్మను చేరదీసి తమ ఇంటికి వెళ్లారు. బ్రహ్మ ప్రభావంతో రావణాసురుడు చిత్రహింసలకు గురవుతున్నాడని అంటున్నారు. ముల్లోకాలను గాయపరచడమే కాకుండా ఇంద్రుని రాజ్యాధికారం నుంచి దింపేందుకు ప్రయత్నించాడని చెప్పాడు. అది అతనికి సరిపోదు. ఋషులు, యక్షగంధరులు అతని మాటలను పట్టించుకోకుండా, అతని భయం వల్ల సూర్యుడు, సముద్రుడు, గాలి కూడా తమ సహజ స్థితిని ప్రకటించలేకపోతున్నాయని విలపించారు. తన బాధను భగ్నం చేసే ఆలోచన ఇవ్వమని బ్రహ్మను వేడుకున్నాడు.
+బ్రహ్మ దేవతలతో రావణుడు నన్ను గంధర్వులు, యక్షులు, దేవతలు మరియు దానవుల మరణం నుండి విముక్తి పొందమని కోరాడు. అతను మానవుల పట్ల మృదువుగా ఉన్నాడు. అందుకే వాటిని ప్రస్తావించలేదు. కాబట్టి రావణుడి మరణం మానవుని చేతిలో ఉంది. నేను
+ఇంతలో విష్ణువు శంఖ చక్రగదాధారిగా వచ్చాడు. దేవతలు ఆ దేవుడిని అనేక రకాలుగా స్తుతించారు. రావణుడిని సంహరించడానికి కన్నుమిన్నుగానక మానవునిగా అవతరించాలని వరగర్వుడు కోరాడు. దశరథ మహారాజు తన ముగ్గురు భార్యలను నాలుగు రూపాల్లో కొడుకు కోసం ప్రార్థించాడు. ఆశ్రితవత్సలుడు ఆశ్రయం ఇచ్చాడు. అందరి పూజలు అందుకున్న అనంతరం అంత్యక్రియలు చేశారు.
+దశరథుడు పుత్రకామేష్టి చేసినప్పుడు, యజ్ఞకుండం నుండి గొప్ప తేజస్సు గల ఒక దివ్య పురుషుడు ఉద్భవించాడు. బ్రహ్మపంపగా వచ్చాడు. చేతిలో వెండి కవర్ ఉన్న బంగారు గిన్నె. అందులో దివ్యపాయసము ఉంది. దశరథుడు అతనికి ఇచ్చాడు. 'ఈ పాయసం ఐశ్వర్యాన్ని, ఆరోగ్యాన్ని పెంపొందిస్తుంది. అన్నింటికంటే, అతను పిల్లలను ప్రసాదిస్తాడు. దశరథుడికి పేదల పట్ల కరుణ కనిపించింది. అతని మనసు ఆనందంతో నిండిపోయింది.
+
+<br>
+<br>
+అతను తన భార్యలు కౌసల్య, సుమిత్ర మరియు కైకేయికి దివ్యపాయసాన్ని పంచాడు. ఒక సంవత్సరం గడిచింది. చైత్రశుద్ధనవమినాడు. కౌసల్యకు రాముడు జన్మించాడు. కైకేయికి భరతుడు, సుమిత్రకు లక్ష్మణుడు, శత్రుఘ్నుడు జన్మించారు. ఈ వార్త విని అయోధ్య ఎంతో సంతోషించింది.
+రామలక్ష్మణ భరత శత్రుఘ్నుడు నెలవంకలా ఉదయిస్తున్నాడు. వేద శాస్త్రాలను అభ్యసించారు. విలువిద్యలో ప్రావీణ్యం కలవాడు. శాస్త్రవేత్త అవ్వండి. సద్గుణాలను ఆటపట్టించారు. ఇవి ఉత్తమ విద్యార్థులు కలిగి ఉండవలసిన లక్షణాలు. రాముడు ఎప్పుడూ తల్లిదండ్రుల సేవలో నిమగ్నమై ఉండేవాడు. చిన్నతనం నుంచి అన్నసేవ మిన్నగా భావించేవాడు లక్ష్మణుడు. ఆయన రాముని అవతారం. భరత శత్రుఘ్నుడికి పరస్పర ప్రేమ, ఆప్యాయతలు ఉంటాయి.
+కాలచక్రం తిరుగుతోంది. ఒకరోజు దశరథుడు తన మంత్రులు, పురోహితులు మొదలైన వారితో సమావేశమయ్యాడు, అతను తన కొడుకుల వివాహం గురించి ప్రస్తావించాడు. సరిగ్గా అదే సమయంలో, గొప్ప తేజస్సు కలిగిన విశ్వామిత్రుడు అక్కడ ప్రవేశించాడు, అతను సృష్టిని తిరిగి సృష్టించగల సమర్థుడు. దశరథుడు ప్రత్యక్షమై సాదరంగా స్వాగతం పలికాడు. అతిథిదేవోభవ - అతిథి మనకు భగవంతుడు వంటివాడు. ఇది తెలిసి దశరథుడు విశ్వామిత్రునికి తగిన మర్యాద ఇచ్చాడు. వినయంగా చేతులు జోడించి విశ్వామిత్రుడు రావడానికి గల కారణాన్ని అడిగాడు. తనపై పనిభారం పెడితే నెరవేరుస్తానని చెప్పారు. దశరథుని వినయానికి విశ్వామిత్రుడు చలించిపోయాడు. 'వశిష్ఠుని ఉపదేశం పొందినవాడు. మీరు ఇలా ప్రవర్తించారని మెచ్చుకున్నారు.
+<br><br>
+విశ్వామిత్రుడు దశరథుడికి తాను వచ్చిన పనిని వివరిస్తానని చెప్పాడు. ఆచరించాలని కోరారు. ఆడటం మర్చిపోవద్దు. అసలు విషయం చెప్పాడు. 'ఓ రాజా! నేను ఒక యజ్ఞం చేయాలని నిర్ణయించుకున్నాను. కానీ మారీచ, సుబాహుల అనే రాక్షసులు యజ్ఞానికి ఆటంకాలు కలిగిస్తున్నారు. వారికి కోపం తెచ్చి శపించే శక్తి ఉన్నా, నేను యజ్ఞదీక్షలో ఉన్నాను, కాబట్టి నాకు చెందని అన్యాయమైన విషయాలను గ్రహించకుండా అధికారాన్ని దుర్వినియోగం చేయను. అందుకు పరాక్రమవంతుడు, ధైర్యవంతుడు అయిన రాముడిని పదిరోజుల పాటు నాతో పంపు. ఆ రాక్షసులను చంపగల వాడు. నాతో పాటు వచ్చి యాగం నిర్వహించడం వల్ల శ్రీరాముడు అనేక ప్రయోజనాలను పొందుతాడు. శ్రీరాముని పరాక్రమం నాకు బాగా తెలుసు. నాకే కాదు, వశిష్ఠ, వామదేవాది మహర్షులకు కూడా తెలుసు. వారందరూ అంగీకరించిన తర్వాతే రామ్‌ని నాతో పంపండి’ అన్నాడు.
+ఈ మాటలు విన్న దశరథుని హృదయం రాయితో నిండిపోయింది. చేతులు జోడించి 'మహర్షీ! నా రాముడు కూడా పదిహేను వందల సంవత్సరాలు నిర్దోషి. విలువిద్య ఇంకా పూర్తి కాలేదు. అతనికి యుద్ధ విషయాలలో తగినంత అవగాహన లేదు. కాబట్టి దయచేసి నా రాముడిని అడగవద్దు. ధనుర్బాణపాణినీ, అదే నీకు కావాలంటే, నేను నిన్ను అనుసరిస్తాను. మీ త్యాగాన్ని కాపాడే బాధ్యత నాది. ఇంత జరిగినా రాముడు లేకుండా నేను ఒక్క క్షణం కూడా జీవించలేను. రాముడు మన పేర్ల పంట. ఆ రాక్షసులు ఈ ప్రాంతానికి ఎవరి అండతో వచ్చారు?’ అని అడిగాడు.
+విశ్వామిత్రుడు ఇలా జవాబిచ్చాడు, 'రావణాసురుడు, విశ్రవసుని కుమారుడు, ఫౌలస్త్య వంశస్థుడు. ఇతను కుబేరుని సోదరుడు. అతనికి అనేక రాక్షస శక్తులు ఉన్నాయి. బ్రహ్మదేవుని అపూర్వ వరములు అతని అహంకారమును పెంచెను. కొండల్లో గొడవలు చేస్తున్నాడు. అలాంటి వ్యక్తికి యజ్ఞం భంగం చేయడం చిన్నవిషయం. కాబట్టి మారీచ మరియు సుబాహులు తనచే ప్రభావితమై యజ్ఞాలకు ఆటంకాలు కలిగిస్తున్నారని దశరథుడు మరింత భయపడ్డాడు. 'యుద్ధంలో యమునితో సమానమైన వారిని కలవడానికి నా బిడ్డను పంపను. నేను కూడా యుద్ధం చేయలేనని చెప్పాడు.
+
+            </p>
+        </div>
+    </center>
+    <br>
+    <a href="balakanda7.html"><button class="prev">Previous</button></a>
+    <a href="balakanda9.html"><button class="next">Next</button></a>
+    <br>
+</body>
+</html>

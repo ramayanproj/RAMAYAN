@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BALAKANDA</title>
+    <style>
+        body{
+            margin: 20px 20px 20px 20px;
+            background-image: url("https://i.pinimg.com/originals/31/9f/3b/319f3b9659e2add93c75329770406f49.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.2em;
+            font-size: 3em;
+        }
+        .balakanda {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 6px solid black;
+            border-radius: 25px;
+        }
+        .video{
+            float:right;
+            margin-right: 0.9rem;
+        }
+        .glassy-text {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            color: #000000;
+            font-family: system-ui, sans-serif;
+            line-height: 1.5;
+            max-width: 87%;
+            padding: 1rem 2rem;
+            font-size: 20PX;
+            text-align: justify;
+        }
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        .glassy-text {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(15px);
+          background-color: transparent;
+        }
+        }
+        .languages{
+            float: right;
+            font-size: 17px;
+            border-radius: 15px;
+            opacity: 0.7;
+        }
+        .language{
+            float: right;
+            font-size: 17px;
+        }
+        .next{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: right;
+        }
+        .prev{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: left;
+        }
+        #speakButton{
+            background-color:transparent;
+            border-color: transparent;
+            float:right;
+        }
+        #close{
+            background-color:transparent;
+            border-color: transparent;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <img class="center" src="https://i.pinimg.com/originals/7f/97/f3/7f97f32d8cbd7f89828f1f791daf5e08.png" height="90px" width="380px">
+    <br>
+    <button id="speakButton"><img src="https://img.icons8.com/ios-filled/256/high-volume.png" height="40px" width="40px"></button>
+    <a href="newpage.html"><button id="close"><img src="https://img.icons8.com/ios-glyphs/256/macos-close.png" height="40px" width="40px"></button></button></a>
+    <script>
+        function speakSelectedText() {
+            const selectedText = window.getSelection().toString();
+            const lang = detectLanguage(selectedText);
+            const processedText = processSelectedText(selectedText);
+            const speech = new SpeechSynthesisUtterance(processedText);
+            speech.lang = lang;
+            window.speechSynthesis.speak(speech);
+          }
+          
+          function detectLanguage(text) {
+            // Use a language detection library or API to detect the language of the text
+            // Return the language code for the detected language
+            return 'te-IN'; // Use 'te-IN' for Telugu
+          }
+          
+          function processSelectedText(selectedText) {
+            // Process the selected text and return the result as a string
+            return selectedText.toUpperCase();
+          }
+          
+          const speakButton = document.getElementById('speakButton');
+          speakButton.addEventListener('click', speakSelectedText);
+          </script>
+    <br><br><br><br>
+    <select name="languages" class="languages" onchange="location = this.value;"> 
+        <option value="balakanda11.html">Telugu</option>
+        <option value="balakanda5.html">English</option> 
+    </select> 
+    <label class="language">Choose a language:</label>
+    <br>
+    <br>
+    <center>
+        <div class="glassy-text">
+            <p id="siteContent" style="font-weight: bold;">
+                సరే అన్నాడు జనకుడు. ఐదు వేల మంది బలవంతులు మరియు దీర్ఘాయువు గల పురుషులు చాలా కష్టపడి శివ విల్లు ఉన్న పేటికను తీసుకువచ్చారు.
+విశ్వామిత్ర మహర్షి అనుమతితో రాముడు విల్లు మధ్య భాగాన్ని అవలీలగా పట్టుకున్నాడు. విలువిద్యలో శిక్షణ పొందిన రాముని చేతికి సోకిన వెంటనే విల్లు వంగింది. అతను వింటినారిని కలిశాడు. వేలాది మంది సభ్యులు ఆశ్చర్యపోయారు. రాముడు సునాయాసంగా తీగ లాగాడు. ఉరుములాంటి శబ్దంతో విల్లు విరిగింది. విశ్వామిత్రుడు, జనకుడు, రామలక్ష్మణులు తప్ప అందరూ మూర్ఛపోయారు.
+ఇచ్చిన మాట ప్రకారం జనకుడు సీతారాముల పెళ్లికి సిద్ధమయ్యాడు. దశరథ మహారాజుకు కానుక పంపాడు. అందరూ అయోధ్య నుండి వచ్చారు. జనకుడు తన కుమార్తెలు సీత మరియు ఊర్మిళలను రామలక్ష్మణులకు మరియు తన తమ్ముడు కుశధ్వజ కుమార్తెలు మాండవి మరియు శ్రుతకీర్తులను భరతశత్రుఘ్నులకు ఇచ్చాడు. కల్యాణోత్సవాలు వైభవంగా జరిగాయి.
+<br>
+<br>
+మరుసటి రోజు విశ్వామిత్ర మహర్షి కొత్త దంపతులను ఆశీర్వదించారు మరియు దశరథుడు జనకమహారాజుకు విద్యను అభ్యసించడానికి హిమాలయాలకు వెళ్ళాడు. తరువాత దశరథుడు బందుమిత్రతో కలిసి అయోధ్యకు బయలుదేరాడు.
+దారిలో పరశురాముడు వారి ఎదురుగా వచ్చాడు. అతడు ప్రళయక రుద్రుడు వంటివాడు. గండ్రగొడ్డలి, ధనుర్భాణాలు ధరించాడు. ప్రజ్నారిల్ అగ్నిలా ఉగ్రుడు. అతనికి క్షత్రియులు సరిపోరు. పూర్వం క్షత్రియుడు కార్తవీర్యార్జునుడు తన తండ్రి జమదగ్నిని చంపాడు. అప్పటి నుంచి క్షత్రియ సంహారానికి కంకణం కట్టుకుంది. ఇరవై ఒక్క సార్లు భూ ప్రదక్షిణలు చేసి ఎందరో క్షత్రియులను తన గొడ్డలికి బలి ఇచ్చాడు.
+<br><br>
+పరశురాముడు తన వైష్ణవ విల్లును వంచమని శ్రీరాముడిని సవాలు చేశాడు. రాఘవ సరే అన్నాడు. ఓడిపోయిన పరశురాముడు వెంటనే మహేంద్ర పర్వతానికి బయలుదేరాడు.
+దశరథుడు పరివారంతో అయోధ్య చేరుకున్నాడు. భరతుడు శత్రుఘ్నుడితో కలిసి మేనమామతో కలిసి తాతయ్య ఇంటికి వెళ్లాడు. రామలక్ష్మణులు అయోధ్యలో తల్లిదండ్రులు మరియు గురువుల సేవలో ఉన్నారు.
+
+            </p>
+        </div>
+    </center>
+    <br>
+    <a href="balakanda10.html"><button class="prev">Previous</button></a>
+    <br>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BALAKANDA</title>
+    <style>
+        body{
+            margin: 20px 20px 20px 20px;
+            background-image: url("https://i.pinimg.com/originals/31/9f/3b/319f3b9659e2add93c75329770406f49.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.2em;
+            font-size: 3em;
+        }
+        .balakanda {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 6px solid black;
+            border-radius: 25px;
+        }
+        .video{
+            float:right;
+            margin-right: 0.9rem;
+        }
+        .glassy-text {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            color: #000000;
+            font-family: system-ui, sans-serif;
+            line-height: 1.5;
+            max-width: 87%;
+            padding: 1rem 2rem;
+            font-size: 20PX;
+            text-align: justify;
+        }
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        .glassy-text {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(15px);
+          background-color: transparent;
+        }
+        }
+        .languages{
+            float: right;
+            font-size: 17px;
+            border-radius: 15px;
+            opacity: 0.7;
+        }
+        .language{
+            float: right;
+            font-size: 17px;
+        }
+        .next{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: right;
+        }
+        .prev{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: left;
+        }
+        #speakButton{
+            background-color:transparent;
+            border-color: transparent;
+            float:right;
+        }
+        #close{
+            background-color:transparent;
+            border-color: transparent;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <img class="center" src="https://i.pinimg.com/originals/79/3b/3d/793b3d63af94dbf06bb831820119b88f.png" height="90px" width="380px">
+    <button id="speakButton"><img src="https://img.icons8.com/ios-filled/256/high-volume.png" height="40px" width="40px"></button>
+    <a href="newpage.html"><button id="close"><img src="https://img.icons8.com/ios-glyphs/256/macos-close.png" height="40px" width="40px"></button></button></a>
+    <script>
+        function speakSelectedText() {
+          const selectedText = window.getSelection().toString();
+          const lang = detectLanguage(selectedText);
+          const processedText = processSelectedText(selectedText);
+          const speech = new SpeechSynthesisUtterance(processedText);
+          speech.lang = lang;
+          window.speechSynthesis.speak(speech);
+        }
+      
+        function detectLanguage(text) {
+          // Use a language detection library or API to detect the language of the text
+          // Return the language code for the detected language
+          return 'IN-en';
+        }
+      
+        function processSelectedText(selectedText) {
+          // Process the selected text and return the result as a string
+          return selectedText.toUpperCase();
+        }
+      
+        const speakButton = document.getElementById('speakButton');
+        speakButton.addEventListener('click', speakSelectedText);
+      </script>
+    <br><br><br><br>
+    <select name="languages" class="languages" onchange="location = this.value;"> 
+        <option value="ayodhyakanda2.html">English</option> 
+        <option value="ayodhyakanda5.html">Telugu</option>
+    </select> 
+    <label class="language">Choose a language:</label>
+    <br>
+    <br>
+    <center>
+        <div class="glassy-text">
+            <p id="siteContent" style="font-weight: bold;">
+                From there Sri Rama went to Sita Mandir. He told about his exile. He told Sita how to get rich in Ayodhya. But Sita decided to go into exile with Rama. She said the same thing to Sri Ram. 'I don't like the bliss of heaven without you. It is said that following Prati is the virtue, happiness and auspiciousness of sati. Sri Rama had to agree. Lakshmana requested Sri Rama to take him along. Before Sri Ram's sevabhagyam, even Trilokadhipatyam is small, he requested him to give him the opportunity to do all the services. He said ok. Lord Rama He told his mother Sumitra and relatives about this and sought their approval.
+Sitarama Lakshmana. He left to visit Dasharatha. Seeing Lord Ram coming on foot, the people were excited. Like Lakshmana, they all wanted to follow Rama. They thought that their polity would be Ayodhya even if Rama was enough. Sitaramalakshman reached Dasharatha's shrine. Dasharatha seduced all the queens. Everyone is lamenting Kaikeyi's mistake Dasharatha's shrine has become tears.
+Sitaramalakshman wore the nàra dhusthulu that Kaikeyi herself had brought. Salute to the parents. Sumitra said to Lakshmana, 'Nayana, consider Sri Rama as your father Dasharatha and Sita as me. She thought the forest to be Ayodhya and blessed it to come and go comfortably. Sumantra prepared the chariot. Sitharamalakshmana mounted the chariot. The chariot sped forward.
+<br>
+<br>
+Ongoing Unable to let go of Lord Rama, some citizens hanged on both sides and at the back of the chariot. Ayodhya, which should have been resounding with the music of Mangala, was filled with lamentations. Dasharatha came to Kausalya Temple in great pain. Kausalya Devi is like a mourner. Sumithra Devi consoled her.
+People follow the chariot of Lord Rama like a shadow. Lord Ram is telling them so much that they will not return to Ayodhya. 'Come to Ayodhya yourself or let us come with you,' pleads the people. The chariot reached the bank of Tamasanadi. Everyone camped there that night. It's dawning. All the citizens are fast asleep due to exhaustion. Sri Rama did not want to make them work. So he told Lakshmana to leave before they wake up. Sitaramalakshmans left there under the leadership of Sumantra. Citizens who have woken up are Sri Rama. They were confused because they did not see it. They blamed themselves for their lack of sleep. Unable to do anything, they turned back to Ayodhya.
+The chariot crossed the rivers Vedasruti, Gomati and Sanandika. Kosala reached the outskirts of the country. From there towards Ayodhya... | Lord Rama bowed back. Moving forward, they reached the banks of the Ganges. Sringiberapuram is located on that coast. 'Guha' was the king of that place, he was a devotee of Sri Rama, and hearing the news that Sri Rama had come, he set out with his people to meet Sri Rama. Seeing Guhun, Rama went ahead with Lakshmana and met him. That night he took Guhudi's hospitality.
+<br><br>
+The next day, as per the order of Lord Rama, Guhu prepared the boat. 'Sri Rama brought the marripas. With them he prepared braids for himself and Lakshmana. Ramalakshman became a Jatadhar. Sitaramalakshmana boarded the boat. Guhudu instructed the sailors to take them to the other shore. Lord Rama gave permission to go to Sumantra and Guhu. He ordered the sailors to move the boat forward.
+A boat is moving in the middle of the river. Sita prayed to Ganga. Napa reached the southern coast, and Lord Rama, who descended from Napa, left for the forests accompanied by Sita Lakshmana. According to the order of Sri Rama, Lakshmana was in front, Sita was behind her, and Sri Rama was behind her. running He reached Bhardwajashram in the evening. It is situated at the confluence of Ganga and Yamuna. Muni entertained them. He asked him to spend his exile in that area. But Rama politely refused.
+Lord Rama asked him to suggest any place suitable for Ashramavasa which is not accessible to people. Bharadwaju said that there is a sacred mountain place called 'Chitrakutam' at a distance of ten kosas, which is the abode of sages. Sitarama Lakshmana crossed the river Yamuna and reached Chitrakoot as per Maharishi's instructions. According to Anna's order, Lakshmana built a cottage there with Neredu sticks and entered into it in a solemn manner.
+            </p>
+        </div>
+    </center>
+    <br>
+    <a href="ayodhyakanda1.html"><button class="prev">Previous</button></a>
+    <a href="ayodhyakanda3.html"><button class="next">Next</button></a>
+    <br>
+</body>
+</html>

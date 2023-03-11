@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+
+<!DOCTYPE html>
+
+    <html lang="en">
+    <head>
+        <title>RAMAYAN-CHARACTERS</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<title>Responsive Card Slider</title>-->
+
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+            /* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff6600;
+}
+.slide-container{
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0;
+}
+.slide-content{
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.card{
+  border-radius: 25px;
+  background-color: #ffffff;
+}
+.image-content,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content{
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("https://i.pinimg.com/originals/4c/91/34/4c9134fb74cdad8a91dc883ce8a9e00a.jpg");
+  border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #f87409;
+}
+.overlay::after{
+  border-radius: 0 25px 0 0;
+  background-color: #FFF;
+}
+.card-image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #FFF;
+  padding: 3px;
+}
+.card-image .card-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #f87409;
+}
+.name{
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.description{
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.button{
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 16px;
+  background-color: #f87409;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover{
+  background: #f87409;
+}
+
+.swiper-navBtn{
+  color: #f7ac6e;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+  color: #f87409;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+  font-size: 35px;
+}
+.swiper-button-next{
+  right: 0;
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-pagination-bullet{
+  background-color: #f7ac6e;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  background-color: #f87409;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content{
+    margin: 0 10px;
+  }
+  .swiper-navBtn{
+    display: none;
+  }
+}
+#close{
+    background-color:transparent;
+    border-color: transparent;
+    float:left;
+}
+#menu{
+    background-color:transparent;
+    border-color: transparent;
+    float:right;
+   
+}
+        </style>            
+    </head>
+    <body>
+        <div class="slide-container swiper">
+            <a href="#"><button id="menu"><img src="https://img.icons8.com/ios-filled/256/xbox-menu.png" height="40px" width="40px"></button></button></a>
+            <a href="mainmenu.html"><button id="close"><img src="https://img.icons8.com/ios-glyphs/256/macos-close.png" height="40px" width="40px"></button></button></a>
+            <br> <br><br>         
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="https://img.icons8.com/officel/256/user.png" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">RAMA</h2>
+                            <p class="description"> Rama is the protagonist of the epic. He is an avatar of Vishnu. He was the son of King Dasharatha of the Kosala Kingdom and his eldest consort, Kaushalya. He is a virtuous, strong, and a just man in his own right. He marries Princess Sita of Mithila. The crux of the epic details his attempts to rescue her from Ravana's clutches at Lanka.
+                            </p>
+
+                            <a href="#" type="button" class="button">View More</a>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="https://img.icons8.com/officel/256/user.png" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">LAKSHMANA</h2>
+                            <p class="description">Lakshmana is 3rd son of King Dasharatha, and half-brother of Rama. He was the twin brother of Shatrughna. They were born to queen Sumitra. He was an incarnation of Sesha Naga. He was deeply devoted to his brother, whom he followed through many dangerous adventures and quests. He was married to Sita's younger sister, Urmila. He guarded his brother Rama and Sita for 14 years day night without sleeping.</p>
+
+                            <a href="#" type="button" class="button">View More</a>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="https://img.icons8.com/officel/256/user.png" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">BHARATA</h2>
+                            <p class="description">Bharata was 2nd son of King Dasharath. He was born to queen Kaikayi. Bharata was the younger half brother of Rama. Ramayana holds Bharata as a symbol of dharma and idealism. He was married to Sita's cousin Mandavi with whom he had two children.</p>
+
+                            <a href="#" type="button" class="button">View More</a>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="https://img.icons8.com/officel/256/user.png" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">SHATRUGHNA</h2>
+                            <p class="description">Shatrughna was the youngest son of King Dasharatha. He was born to queen Sumitra and was a twin brother of Lakshmana. He was married to Sita's cousin Shrutakirti with whom he had two children.</p>
+
+                            <a href="#" type="button" class="button">View More</a>
+                        </div>
+                    </div>
+                    <br><br>
+                 </div>
+            </div>
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        
+    </body>
+
+    <!-- Swiper JS -->
+      <!--Uncomment this line-->
+    <!--<script src="js/swiper-bundle.min.js"></script>-->
+
+    <!-- JavaScript -->
+      <!--Uncomment this line-->
+    <!--<script src="js/script.js"></script>-->
+</html>

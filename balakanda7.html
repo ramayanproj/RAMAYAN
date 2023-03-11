@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BALAKANDA</title>
+    <style>
+        body{
+            margin: 20px 20px 20px 20px;
+            background-image: url("https://i.pinimg.com/originals/31/9f/3b/319f3b9659e2add93c75329770406f49.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.2em;
+            font-size: 3em;
+        }
+        .balakanda {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 6px solid black;
+            border-radius: 25px;
+        }
+        .video{
+            float:right;
+            margin-right: 0.9rem;
+        }
+        .glassy-text {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            color: #000000;
+            font-family: system-ui, sans-serif;
+            line-height: 1.5;
+            max-width: 87%;
+            padding: 1rem 2rem;
+            font-size: 20PX;
+            text-align: justify;
+        }
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        .glassy-text {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(15px);
+          background-color: transparent;
+        }
+        }
+        .languages{
+            float: right;
+            font-size: 17px;
+            border-radius: 15px;
+            opacity: 0.7;
+        }
+        .language{
+            float: right;
+            font-size: 17px;
+        }
+        .next{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: right;
+        }
+        .prev{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: left;
+        }
+        #speakButton{
+            background-color:transparent;
+            border-color: transparent;
+            float:right;
+        }
+        #close{
+            background-color:transparent;
+            border-color: transparent;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <img class="center" src="https://i.pinimg.com/originals/7f/97/f3/7f97f32d8cbd7f89828f1f791daf5e08.png" height="90px" width="380px">
+    <br>
+    <button id="speakButton"><img src="https://img.icons8.com/ios-filled/256/high-volume.png" height="40px" width="40px"></button>
+    <a href="newpage.html"><button id="close"><img src="https://img.icons8.com/ios-glyphs/256/macos-close.png" height="40px" width="40px"></button></button></a>
+    <script>
+        function speakSelectedText() {
+            const selectedText = window.getSelection().toString();
+            const lang = detectLanguage(selectedText);
+            const processedText = processSelectedText(selectedText);
+            const speech = new SpeechSynthesisUtterance(processedText);
+            speech.lang = lang;
+            window.speechSynthesis.speak(speech);
+          }
+          
+          function detectLanguage(text) {
+            // Use a language detection library or API to detect the language of the text
+            // Return the language code for the detected language
+            return 'te-IN'; // Use 'te-IN' for Telugu
+          }
+          
+          function processSelectedText(selectedText) {
+            // Process the selected text and return the result as a string
+            return selectedText.toUpperCase();
+          }
+          
+          const speakButton = document.getElementById('speakButton');
+          speakButton.addEventListener('click', speakSelectedText);
+          </script>
+    <br><br><br><br>
+    <select name="languages" class="languages" onchange="location = this.value;"> 
+        <option value="balakanda7.html">Telugu</option>
+        <option value="balakanda1.html">English</option> 
+    </select> 
+    <label class="language">Choose a language:</label>
+    <br>
+    <br>
+    <center>
+        <div class="glassy-text">
+            <p id="siteContent" style="font-weight: bold;">
+                స్నానానికి నదిలోకి దిగిన వాల్మీకి తన చుట్టూ ఉన్న ప్రకృతి అందాలకు పరవశించిపోయాడు. అతను సమీపంలోని కొమ్మపై రెండు చిన్న పక్షులను చూశాడు. వారి ఆప్యాయత అపారమైనది. వారి శ్రావ్యమైన ధ్వనులు ఆనందింపజేస్తున్నాయి. ఇంతలో, ఒక వేటగాడు భయంకరమైన బాణంతో మగ పక్షిని కాల్చివేస్తాడు. రక్తం కారుతూ, ఉలిక్కిపడి చనిపోయింది. ఆడపక్షి ఎడబాటును తట్టుకోలేక తల్లడిల్లిపోయింది. హృదయ విదారకమైన ఈ దృశ్యాన్ని చూసిన వాల్మీకి కరుణతో నిండిపోయింది. ధర్మవేషం తెగిపోయింది. అప్రయత్నంగా నోటి వెంట వెంటనే…
+<br>
+<br>
+మానీషాద<br>
+ప్రతిష్టాత్త్వ<br>
+మాగమః శాశ్వతి: సమ: యత్ క్రుంచమిథునాదేకమ్
+అవధీ: కామమోహితం||<br>
+(ఓ కిరాతా! కాకుల జతలో పక్షిని చంపిన నీవు శాశ్వతంగా అపఖ్యాతి పాలవుతావు.)
+మాటలు వచ్చాయి.
+<br><br>
+అని చెప్పాడు కానీ అప్పుడు అతను ఆశ్చర్యపోయాడు. ఈ పదాలు సమాన అక్షరాలతో నాలుగు పాదాలతో ప్రాసతో ఉంటాయి. అది ఛందస్సు స్తోత్రంగా ఉండేలా చూసుకున్నాడు. శోకంలోంచి పుట్టింది శ్లోకం. అందరూ తిరిగి ఆశ్రమానికి చేరుకున్నారు. కానీ క్రౌంచపక్షి భయంకరమైన దృశ్యం వాల్మీకి మనసును వదలదు. అదే ఆలోచన. అదో అనుభూతి. ఇంతలో సృష్టికర్త అయిన బ్రహ్మ వాల్మీకిని చూసేందుకు ఆశ్రమానికి వచ్చాడు. వాల్మీకి అతనికి శాస్త్రోక్తమైన సహాయమంతా చేశాడు. బ్రహ్మ వాల్మీకిని కూర్చోమని అడిగాడు. వాల్మీకి బ్రహ్మ ఆసనం కంటే కొంచెం దిగువన కూర్చున్నాడు. పెద్దల పట్ల ఇలా వ్యవహరించాలి. బ్రహ్మదేవుడు ఎదురుగా ఉన్నా క్రౌంచపక్షి బాధ వాల్మీకిని వదలదు. మదిలో 'మనిషాద' కీర్తన మళ్లీ ధ్వనించింది. అన్నీ తెలిసిన బ్రహ్మ నవ్వి 'ఓ ఋషీశ్వరా! నీవు పలికినది శ్లోకం. అది నా సంకల్ప ప్రభావమే, ఈ ఛందస్సులో (అనుష్టుప్) శ్రీరామచరిత్రను వ్రాయమని ఆజ్ఞాపించాడు. నారదుడు కూడా స్పష్టంగా వివరించని రామకథలోని రహస్యాలు బయటపడతాయని దీవించాడు. ఈ నేలలో పర్వతాలు, నదులు ఉన్నంత కాలం రామాయణ గాథను కీర్తిస్తూనే ఉంటారని దీవించారు. మహర్షి వాల్మీకి, అయోధ్య, బ్రహ్మ ఆజ్ఞతో రామాయణం రాయడం ప్రారంభించాడు:
+సరయూన తీరంలో 'కోసల' అనే ప్రసిద్ధ దేశం ఉంది. అందులో 'అయోధ్య' అనే మహానగరం. 'అయోధ్య' అంటే యోధులు జయించడం అసాధ్యం. మను నిర్మించాడు. కోసల దేశాన్ని దశరథ మహారాజు పరిపాలిస్తున్నాడు. అతను సూర్య కుటుంబానికి చెందినవాడు. మహావీరుడు దేవతల పక్షాన ఉన్న రాక్షసులతో చాలాసార్లు యుద్ధం చేశాడు. ధర్మపారాయణం. ప్రజలను తన సొంత బిడ్డల్లా చూసుకున్నాడు. వసిష్ట మరియు వామదేవ అతని ప్రధాన పూజారులు, సుమంత్రుడు మొదలుకొని ఎనిమిది మంది. మంత్రులు. అతని పాలనలో కోసల దేశం భోగాలతో విలసిల్లింది. ప్రజలు సద్గుణవంతులు మరియు సంతోషంగా ఉంటారు. ఆదరాజా తథా ప్రజాః రాజుగా, ప్రజలు కూడా అంతే.
+పిల్లలు లేరనే ఆందోళనతో దశరథుడు కుమిలిపోయాడు. సంతానం కోసం అశ్వ యాగం చేయాలనే ఆలోచన. వెంటనే అర్చకులు, గురువులతో సమావేశమయ్యారు. తన మనసులోని మాటను బయటపెట్టాడు. అని వారు చెప్పారు. సరయునా నదికి ఉత్తర తీరాన యజ్ఞవేదిక సిద్ధమైంది. ఈ యాగానికి ఋష్యశృంగ మహర్షిని ఆహ్వానిస్తే సార్థకత చేకూరుతుందని మంత్రి సారథి సుమంత్రుడు సూచించాడు. ఋష్యశృంగుడు విభాండక మహర్షి కుమారుడు. నిష్ఠాగరిష్ట. ఆయన ఎక్కడ ఉంటే అక్కడ భారీ వర్షాలు కురుస్తాయి. ఋష్యశృంగుడు దశరధుని ఆజ్ఞలను గౌరవంగా పాటించాడు. మూడు రోజుల పాటు శాస్త్రోక్తంగా అశ్వమేధయాగం నిర్వహించారు.
+
+            </p>
+        </div>
+    </center>
+    <br>
+    <a href="balakanda6.html"><button class="prev">Previous</button></a>
+    <a href="balakanda8.html"><button class="next">Next</button></a>
+    <br>
+</body>
+</html>

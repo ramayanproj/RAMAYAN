@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BALAKANDA</title>
+    <style>
+        body{
+            margin: 20px 20px 20px 20px;
+            background-image: url("https://i.pinimg.com/originals/31/9f/3b/319f3b9659e2add93c75329770406f49.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.2em;
+            font-size: 3em;
+        }
+        .balakanda {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 6px solid black;
+            border-radius: 25px;
+        }
+        .video{
+            float:right;
+            margin-right: 0.9rem;
+        }
+        .glassy-text {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            color: #000000;
+            font-family: system-ui, sans-serif;
+            line-height: 1.5;
+            max-width: 87%;
+            padding: 1rem 2rem;
+            font-size: 20PX;
+            text-align: justify;
+        }
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        .glassy-text {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(15px);
+          background-color: transparent;
+        }
+        }
+        .languages{
+            float: right;
+            font-size: 17px;
+            border-radius: 15px;
+            opacity: 0.7;
+        }
+        .language{
+            float: right;
+            font-size: 17px;
+        }
+        .next{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: right;
+        }
+        #speakButton{
+            background-color:transparent;
+            border-color: transparent;
+            float:right;
+        }
+        #close{
+            background-color:transparent;
+            border-color: transparent;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <img class="center" src="https://i.pinimg.com/originals/7f/97/f3/7f97f32d8cbd7f89828f1f791daf5e08.png" height="90px" width="380px">
+    <br>
+    <a href="balakandavideo.html"><img class="video" src="https://img.icons8.com/fluency-systems-filled/256/video-clip.png" height="40px" width="40px"></a>
+    <button id="speakButton"><img src="https://img.icons8.com/ios-filled/256/high-volume.png" height="40px" width="40px"></button>
+    <a href="newpage.html"><button id="close"><img src="https://img.icons8.com/ios-glyphs/256/macos-close.png" height="40px" width="40px"></button></button></a>
+    <script>
+        function speakSelectedText() {
+          const selectedText = window.getSelection().toString();
+          const lang = detectLanguage(selectedText);
+          const processedText = processSelectedText(selectedText);
+          const speech = new SpeechSynthesisUtterance(processedText);
+          speech.lang = lang;
+          window.speechSynthesis.speak(speech);
+        }
+      
+        function detectLanguage(text) {
+          // Use a language detection library or API to detect the language of the text
+          // Return the language code for the detected language
+          return 'IN-en';
+        }
+      
+        function processSelectedText(selectedText) {
+          // Process the selected text and return the result as a string
+          return selectedText.toUpperCase();
+        }
+      
+        const speakButton = document.getElementById('speakButton');
+        speakButton.addEventListener('click', speakSelectedText);
+      </script>
+    <br><br><br><br>
+    <select name="languages" class="languages" onchange="location = this.value;"> 
+        <option value="balakanda.html">English</option> 
+        <option value="balakanda6.html">Telugu</option> 
+    </select> 
+    <label class="language">Choose a language:</label>
+    <br>
+    <br>
+    <img class="balakanda" src="https://i.pinimg.com/236x/4d/3b/60/4d3b60174c1aea2932e89d92fb8f3e78.jpg?nii=t" height="300px" width="400px">
+    <br>
+    <center>
+        <div class="glassy-text">
+            <p id="siteContent" style="font-weight: bold;">
+Narada Maharshi, who was constantly remembering Srimannarayana, came to the ashram of Valmiki, the great sage. Narada was an ascetic and the best of speakers. Valmiki inquired of Narada (inquiry is the source of knowledge). 'O Maharshi! He has all good qualities, he does not rush to face any danger, he knows the Dharma, he supports those who seek refuge, 'He who does not fail to speak, he does good to all living beings, he is brave, he is brave, he is not jealous, he is beautiful... Is there anyone in this world who has such good qualities?' He asked. Narada replied with a smile. 'Mahamuni! It is not common to have so many characteristics in one person. But, the one who embodies all the special qualities that you mentioned is Sri Ramuda. Narada briefly narrated the Ramayana to Valmiki. From there he went to Brahmaloka.
+<br>
+<br>
+The story of Rama is rooted in Valmiki's mind. Narada's words are still ringing in his ears. He went to take a bath at Tamasana near the Ganges. Bharadwajani's disciples are walking along. Tamasana is as pure as the mind of a good man.
+            </p>
+        </div>
+    </center>
+    <br>
+    <a href="balakanda1.html"><button class="next">Next</button></a>
+    <br>
+    <br>
+</body>
+</html>

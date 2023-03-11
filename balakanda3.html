@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BALAKANDA</title>
+    <style>
+        body{
+            margin: 20px 20px 20px 20px;
+            background-image: url("https://i.pinimg.com/originals/31/9f/3b/319f3b9659e2add93c75329770406f49.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.2em;
+            font-size: 3em;
+        }
+        .balakanda {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 6px solid black;
+            border-radius: 25px;
+        }
+        .video{
+            float:right;
+            margin-right: 0.9rem;
+        }
+        .glassy-text {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            color: #000000;
+            font-family: system-ui, sans-serif;
+            line-height: 1.5;
+            max-width: 87%;
+            padding: 1rem 2rem;
+            font-size: 20PX;
+            text-align: justify;
+        }
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        .glassy-text {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(15px);
+          background-color: transparent;
+        }
+        }
+        .languages{
+            float: right;
+            font-size: 17px;
+            border-radius: 15px;
+            opacity: 0.7;
+        }
+        .language{
+            float: right;
+            font-size: 17px;
+        }
+        .next{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: right;
+        }
+        .prev{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: left;
+        }
+        #speakButton{
+            background-color:transparent;
+            border-color: transparent;
+            float:right;
+        }
+        #close{
+            background-color:transparent;
+            border-color: transparent;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <img class="center" src="https://i.pinimg.com/originals/7f/97/f3/7f97f32d8cbd7f89828f1f791daf5e08.png" height="90px" width="380px">
+    <button id="speakButton"><img src="https://img.icons8.com/ios-filled/256/high-volume.png" height="40px" width="40px"></button>
+    <a href="newpage.html"><button id="close"><img src="https://img.icons8.com/ios-glyphs/256/macos-close.png" height="40px" width="40px"></button></button></a>
+    <script>
+        function speakSelectedText() {
+          const selectedText = window.getSelection().toString();
+          const lang = detectLanguage(selectedText);
+          const processedText = processSelectedText(selectedText);
+          const speech = new SpeechSynthesisUtterance(processedText);
+          speech.lang = lang;
+          window.speechSynthesis.speak(speech);
+        }
+      
+        function detectLanguage(text) {
+          // Use a language detection library or API to detect the language of the text
+          // Return the language code for the detected language
+          return 'IN-en';
+        }
+      
+        function processSelectedText(selectedText) {
+          // Process the selected text and return the result as a string
+          return selectedText.toUpperCase();
+        }
+      
+        const speakButton = document.getElementById('speakButton');
+        speakButton.addEventListener('click', speakSelectedText);
+      </script>
+    <br><br><br><br>
+    <select name="languages" class="languages" onchange="location = this.value;"> 
+        <option value="balakanda3.html">English</option> 
+        <option value="balakanda9.html">Telugu</option>
+    </select> 
+    <label class="language">Choose a language:</label>
+    <br>
+    <br>
+    <center>
+        <div class="glassy-text">
+            <p id="siteContent" style="font-weight: bold;">
+                Meanwhile Lord Vishnu came as Shankha Chakragadadhari. The gods praised that god in many ways. Varagarvan requested Kannuminnuganaka to incarnate as a human to kill Ravana. Dasharatha Maharaja prayed for a son in four forms to his three wives. Asritavatsalu gave shelter. After receiving the worship of all, he was interred.
+When Dasharatha performed Putrakameshti, a divine man of great brilliance emerged from the Yajna Kund. He came as Brahmapampa. Gold bowl with silver cover in hand. There is Divyapayasa in it. Dasaratha gave it to him. 'This payasam brings wealth and promotes health. Above all, he bestows children. Dasharatha seems to have found compassion for the poor. His mind was filled with joy.
+He distributed Divyapayasa to his wives Kausalya, Sumitra and Kaikeyi. A year has passed. Chaitrasuddhanavaminadu. Lord Rama was born to Kausalya. Bharata was born to Kaikeyi, Lakshmana and Shatrughnu were born to Sumitra. Ayodhya was overjoyed to hear this news.
+Ramalakshmana Bharata Shatrughnu is rising like the crescent moon. Studied Vedic sciences. Skilled in archery. Become a scientist. Virtues were teased. These are the qualities that the best students should possess. Rama was always engaged in the service of his parents. Lakshmana was the one who considered Annaseva Minna from childhood. He is the incarnation of Rama. Bharata Shatrughnu has mutual love and affection.
+<br><br>
+The wheel of time is spinning. One day Dasharatha met with his ministers, priests, etc. He is referring to the marriage of his sons. At exactly the same time, Vishwamitra, the great splendour, entered there sage He is capable of re-creating creation. Dasharatha appeared and welcomed him warmly. Atithidevobhava - A guest is like God to us. Knowing this, Dasharatha gave Vishwamitru appropriate courtesy. He humbly folded his hands and asked the reason for Vishwamitra's arrival. He said that if the work load is placed on him, he will fulfill it. Vishwamitra was moved by Dasharatha's humility. 'He who received the teachings of Vashishtha. He appreciated that you behave like this.
+Vishvamitra told Dasharatha that he would explain the work he had come to do. He asked to practice it. Don't forget to play. He said the real thing. 'O king! I have decided to do a yajna. But Maricha and Subahula are the demons who are causing disruptions to the Yajna. Even if I have the power to anger and curse them, I am in Yajnadiksha, so I will not misuse the power without realizing the gratuitous things that do not belong to me. For that, send Lord Rama, who is mighty and brave, with me for ten days. He is the one who can kill those demons. By coming with me and taking care of the sacrifice, Lord Rama will get many benefits. I know very well the prowess of Lord Rama. Not only I, Vashistha, Vamadevadi sages also know. He said, 'Send Ram with me only after they all agree'.
+Hearing these words, Dasharatha's heart was filled with stone. Join hands and say 'Maharshi! My Lord Rama is also blameless for fifteen hundred years. Archery is not complete yet. He was not sufficiently familiar with matters of war. So please don't ask for my Rama. If that's what you want, Dhanurbanapanini, I will follow you. I am responsible for preserving your sacrifice. In spite of all this, I cannot live for a single moment without Rama. Rama is the harvest of our names. He asked, 'Whose egg did those demons come to this place?'
+Vishwamitra replied, 'Ravanasura, the son of Visravasa, a descendant of Faulastya. He is the brother of Kubera. He has many demonic powers. Brahma's extraordinary boons swelled his pride. He is making trouble in the hills. For such a person breaking the Yajna is trivial. Hence in such works does not participate Dasharatha was even more afraid that Maricha and Subahus were being influenced by him and causing disruptions to the Yagnas. 'I will not send my child to meet those who are equal to Yamuni in war. He said that I am also incapable of war.
+<br><br>
+Vishwamitra crouched on the fire at Dasharatha's words. 'It is not like you to miss a word. If I am ready for you, I will go back empty handed. Be at ease," said Vishwamitra. Noticing the seriousness of the situation, Vasishtha Maharishi advised Dasharatha to keep his word. He warned that the fruit of his good deeds would perish if he did not keep his word. He had no hesitation in sending Rama after Vishwamitra, who was skilled in various ways. He pointed out that good things would happen if Rama was sent.
+Dasharatha bowed to Vasishtha's wishes. He summoned Ramalakshmana. He blessed with Kausalya. He handed it over to Vishwamitra with a calm mind.
+Vishwamitra was accompanied by Dhanurdhari Rama. is running Lakshmana follows. Traveled a long way along the banks of Sarayunadi. All three, then Rama Lakshmana instructed 'Bala 'Atibala' Vidyas. Vishwamitra Maharshi, due to these effects, there is no fatigue, hunger pangs, and the appearance does not diminish. Even in sleep or in any other state, demons cannot do anything. There is no one who can stand in the hills.
+Rama engaged himself in the service of Guru. He touched Vishwamitra's feet. Served. Guru seva gives special results. They slept that night on the banks of Sarayunadi.
+
+            </p>
+        </div>
+    </center>
+    <br>
+    <a href="balakanda2.html"><button class="prev">Previous</button></a>
+    <a href="balakanda4.html"><button class="next">Next</button></a>
+    <br>
+</body>
+</html>

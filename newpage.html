@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RAMAYAN - KANDAS</title>
+</head>
+<style>
+body{
+  display:flex;
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+  background-image: url("https://i.pinimg.com/originals/31/9f/3b/319f3b9659e2add93c75329770406f49.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
+  font-family: arial;
+}
+
+.container{
+  width: 965px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  
+}
+
+.container .card{
+  position: relative;
+}
+
+.container .card .face{
+  width:300px;
+  height: 200px;
+  transition:.4s;
+  
+}
+
+.container .card .face.face1{
+  position: relative;
+  background: rgb(216, 130, 2);
+  display: flex;
+  justify-content: center;
+  align-content:center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+
+.container .card:hover .face.face1{
+  transform: translateY(0);
+  box-shadow:
+    inset 0 0 60px rgb(190, 190, 190),
+    inset 20px 0 80px rgb(238, 122, 13),
+    inset -20px 0 80px rgb(247, 88, 48),
+    inset 20px 0 300px rgb(238, 122, 13),
+    inset -20px 0 300px rgb(247, 88, 48),
+    0 0 50px #fff,
+    -10px 0 80px rgb(238, 122, 13),
+    10px 0 80px rgb(247, 88, 48);
+   
+}
+
+
+.container .card .face.face1 .content{
+  opacity: .7;
+  transition:  0.5s;
+  text-align: center;
+}
+
+.container .card:hover .face.face1 .content{
+  opacity: 1;
+ 
+}
+
+.container .card .face.face1 .content i{
+  font-size: 3em;
+  color: white;
+  display: inline-block;
+   
+}
+
+.container .card .face.face1 .content h3{
+  font-size: 1em;
+  color: white;  
+  text-align: center;
+
+}
+
+.container .card .face.face1 .content a{
+   transition: .5s;
+}
+
+.container .card .face.face2{
+   position: relative;
+   background: whitesmoke;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0,0,0,.8);
+  transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p, a{
+  font-size: 10pt;
+  margin: 0 ;
+  padding: 0;
+  color:#333;
+}
+
+.container .card .face.face2 .content a{
+  text-decoration:none;
+  color: black;
+  box-sizing: border-box;
+  outline : 1px dashed rgb(0, 0, 0);
+  padding: 10px;
+  margin: 15px 0 0;
+  display: inline-block;
+}
+
+.container .card .face.face2 .content a:hover{
+  background: rgb(51, 51, 51) ;
+  color: rgb(202, 201, 201); 
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+}
+#close{
+            background-color:transparent;
+            border-color: transparent;
+            float:left;
+            align-items: flex-end;
+        }
+</style>
+<body>
+  <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
+  <div class="container">
+     <div class="card">
+       <div class="face face1">
+         <div class="content">
+            <img src="https://i.pinimg.com/originals/ea/07/dd/ea07dd9e695366a6154d5eee04c38b79.png" height="120px" width="120px">          
+           <h3>BALAKANDA</h3>
+         </div>
+       </div>
+       <div class="face face2">
+         <div class="content">
+           <p> Bala Kanda (or Bala Kandam) is the first book of the Valmiki Ramayana. This Kanda narrates about Prince Rama's birth, his youthful adventures, and his marriage to the Princess Sita.</p>
+           <a href="balakanda.html" type="button">Read More</a>
+         </div>
+       </div>
+    </div>
+    
+    <div class="card">
+       <div class="face face1">
+         <div class="content">
+      <img src="https://img.icons8.com/external-photo3ideastudio-flat-photo3ideastudio/256/external-palace-japan-photo3ideastudio-flat-photo3ideastudio.png" height="90px" width="90px">              
+        <h3>AYODHYAKANDA</h3>
+         </div>
+       </div>
+       <div class="face face2">
+         <div class="content">
+           <p> Ayodhya Kanda (the book of Ayodhya) is the second book of the Valmiki Ramayana, which is one of the two great epics of India (the other being the Mahabharata). The book consists of 119 sargas (sometimes translated as chapters or "cantos") of Sanskrit verse.</p>
+           <a href="ayodhyakanda.html" type="button">Read More</a>
+         </div>
+       </div>
+    </div>
+    
+    
+    <div class="card">
+       <div class="face face1">
+         <div class="content">
+           <img src="https://img.icons8.com/external-justicon-flat-justicon/256/external-forest-landscape-justicon-flat-justicon-2.png" width="90px" height="90px">
+            <h3>ARANYAKANDA</h3>
+         </div>
+       </div>
+       <div class="face face2">
+         <div class="content">
+           <p> Sri Rama along with Sita and Lakshmana enters Dandakaranya which is infested by flesh-eating demons. Sri Rama considers saving the sages who are living for the world as his Dharma. He kills a demon called Viradha who had caught them like babies which terrified Sita.</p>
+           <a href="aranyakanda.html" type="button">Read More</a>
+         </div>
+       </div>
+    </div>
+
+    <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <img src="https://img.icons8.com/color/256/gorilla.png" height="90px" width="90px">
+             <h3>KISHKINDAKANDA</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p> Kishkindha Kand is one of the seven kands in Valmiki's Ramayan. The Kand involves the meeting between Lord Rama and his disciple Hanuman. It also features the story of two vanar brothers Bali and Sugriva and how Rama killed Bali who enslaved Surgriva's wife.</p>
+            <a href="kishkindkanda.html" type="button">Read More</a>
+          </div>
+        </div>
+     </div>
+
+     <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <img src="https://i.pinimg.com/originals/d8/33/28/d83328a1294702c4897e02d3981abe48.png" height="120px" width="120px">
+             <h3>SUNDARAKANDA</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p> Sundara Kanda (Sanskrit: सुन्दरकाण्ड, romanized: Sundara Kāṇḍa, lit.'beautiful chapter') is the fifth book in the Hindu epic Ramayana. The original Sundara Kanda is in Sanskrit, and was composed in popular tradition by Valmiki, who was the first to scripturally record the Ramayana.</p>
+            <a href="sundarakanda.html" type="button">Read More</a>
+          </div>
+        </div>
+     </div>
+
+     <div class="card">
+        <div class="face face1">
+          <div class="content">
+            <img src="https://i.pinimg.com/originals/18/71/3c/18713cc3d05a155bfb3ba55c30cb114d.png" height="120px" width="120px">
+             <h3>YUDDHAKANDA</h3>
+          </div>
+        </div>
+        <div class="face face2">
+          <div class="content">
+            <p> The Yuddha Kanda (also referred to as Lanka kanda) is one of the main episodes in the great epic Ramayana. The Yuddha Kandam narrates the War between the army of Rama and the army of Ravana. Jambavan asks the monkeys Nala and Nila to start work on constructing the bridge over the sea.</p>
+            <a href="yuddhakanda.html" type="button">Read More</a>
+          </div>
+        </div>
+     </div>
+  </div>
+  <button id="close"><a href="mainmenu.html"><img src="https://img.icons8.com/ios-glyphs/256/macos-close.png" height="40px" width="40px"></button>
+</body>
+</html>

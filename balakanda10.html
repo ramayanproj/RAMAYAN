@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BALAKANDA</title>
+    <style>
+        body{
+            margin: 20px 20px 20px 20px;
+            background-image: url("https://i.pinimg.com/originals/31/9f/3b/319f3b9659e2add93c75329770406f49.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.2em;
+            font-size: 3em;
+        }
+        .balakanda {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 6px solid black;
+            border-radius: 25px;
+        }
+        .video{
+            float:right;
+            margin-right: 0.9rem;
+        }
+        .glassy-text {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            color: #000000;
+            font-family: system-ui, sans-serif;
+            line-height: 1.5;
+            max-width: 87%;
+            padding: 1rem 2rem;
+            font-size: 20PX;
+            text-align: justify;
+        }
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        .glassy-text {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(15px);
+          background-color: transparent;
+        }
+        }
+        .languages{
+            float: right;
+            font-size: 17px;
+            border-radius: 15px;
+            opacity: 0.7;
+        }
+        .language{
+            float: right;
+            font-size: 17px;
+        }
+        .next{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: right;
+        }
+        .prev{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: left;
+        }
+        #speakButton{
+            background-color:transparent;
+            border-color: transparent;
+            float:right;
+        }
+        #close{
+            background-color:transparent;
+            border-color: transparent;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <img class="center" src="https://i.pinimg.com/originals/7f/97/f3/7f97f32d8cbd7f89828f1f791daf5e08.png" height="90px" width="380px">
+    <br>
+    <button id="speakButton"><img src="https://img.icons8.com/ios-filled/256/high-volume.png" height="40px" width="40px"></button>
+    <a href="newpage.html"><button id="close"><img src="https://img.icons8.com/ios-glyphs/256/macos-close.png" height="40px" width="40px"></button></button></a>
+    <script>
+        function speakSelectedText() {
+            const selectedText = window.getSelection().toString();
+            const lang = detectLanguage(selectedText);
+            const processedText = processSelectedText(selectedText);
+            const speech = new SpeechSynthesisUtterance(processedText);
+            speech.lang = lang;
+            window.speechSynthesis.speak(speech);
+          }
+          
+          function detectLanguage(text) {
+            // Use a language detection library or API to detect the language of the text
+            // Return the language code for the detected language
+            return 'te-IN'; // Use 'te-IN' for Telugu
+          }
+          
+          function processSelectedText(selectedText) {
+            // Process the selected text and return the result as a string
+            return selectedText.toUpperCase();
+          }
+          
+          const speakButton = document.getElementById('speakButton');
+          speakButton.addEventListener('click', speakSelectedText);
+          </script>
+    <br><br><br><br>
+    <select name="languages" class="languages" onchange="location = this.value;"> 
+        <option value="balakanda10.html">Telugu</option> 
+        <option value="balakanda4.html">English</option> 
+    </select> 
+    <label class="language">Choose a language:</label>
+    <br>
+    <br>
+    <center>
+        <div class="glassy-text">
+            <p id="siteContent" style="font-weight: bold;">
+                పాదాలతో పాటు మాటలు కదులుతున్నాయి. రాముని కోరిక మేరకు వారి వంశ పూర్వాపరాలను వివరించాడు. విశ్వామిత్రుడు ఆ రాత్రి వారు శోణానది ఒడ్డున విశ్రమించారు. మరుసటి రోజు వారు పవిత్ర గంగానదిని దర్శించుకున్నారు. స్నానం చేసి తన వ్రతం పూర్తి చేసుకున్నాడు. గంగ కథ వినాలని రాముడు వినయంగా అడిగాడు. విశ్వామిత్రుడు విన్నాడు. జిజ్ఞాస గల శిష్యులు, జ్ఞానముగల గురువు - జ్ఞాన ప్రసారానికి అంతం ఉందా?
+పాతాళంలో బూడిదలో పడి ఉన్న తన తండ్రి సగరుని పుత్రులకు అదృష్టాన్ని ప్రసాదించాలని సంకల్పించాడు. భగీరథుడు. ఒకే ఒక మార్గం ఉంది. వారి బూడిదపై నరకం పోస్తోంది. అయితే ఆకాశ గంగను పాతాళానికి దింపడం ఒక్క నగరానికి సంబంధించిన విషయమా? అయితే, సంకల్పం కోసం ఏదీ అసాధ్యం కాదు. భగీరథుడు తీవ్రమైనవాడు
+తపస్సు చేసాడు. అతను బ్రహ్మ మరియు శివుని సంతోషించాడు. ఎన్ని ఆటంకాలు ఎదురైనా తన దృఢ సంకల్పం నుంచి వదలలేదు. అతను గంగను పాతాళానికి తీసుకెళ్లడంలో విజయం సాధించి మనోరథుడు అయ్యాడు. అందుకే పట్టుదల విషయంలో ‘భగీరథ ప్రయత్నం’ అనే జాతీయ నినాదం ఏర్పడింది. రాముడు భగీరథుని వంశస్థుడు.
+<br>
+<br>
+విశ్వామిత్రుడు రాముడికి గంగావతరణ గురించి చెప్పడంలో అంతరార్థం ఉంది. తన పూర్వీకులు ఎంత గొప్పవారో తెలుసుకుని దానికి అనుగుణంగా జీవించారు. తల్లితండ్రుల పట్ల ఎంత భక్తిని కలిగి ఉండాలో తెలియజేస్తుంది. శ్రమ ఫలించే వరకు ఎలా పట్టుదలతో ఉండాలో చెబుతోంది. కానీ విశ్వామిత్రుడు ఇదంతా సూటిగా చెప్పలేదు. కానీ అతను లోపలి అర్థం అర్థం చేసుకున్నాడు. రాముడు ఉత్తమ గురువుల సంగతి ఇదే.
+విశ్వామిత్ర రామలక్ష్మణులు మిథిలానగర సమీపంలోకి చేరుకున్నారు. రాముడికి అక్కడ ఒక ఆశ్రమం కనిపించింది. ఇది పాతదిగా మరియు అందంగా కనిపిస్తుంది. కానీ జనం లేరు. ‘ఏ సినిమా’ అని అడిగాడు రాముడు. ఇది గౌతమ మహర్షి ఆశ్రమం, విశ్వామిత్రుడు కథ మొత్తం వివరించాడు, 'మహా మహర్షి గౌతమ మహర్షి తన భార్య అహల్యతో కలిసి ఈ ఆశ్రమంలో ఉండేవాడు. ఒకానొక సందర్భంలో అహల్య నేరం చేసిందని గౌతముడికి కోపం వచ్చింది. కేవలం ఆహార పానీయాలు మరియు వాయువులను మాత్రమే వినియోగిస్తూ వేల సంవత్సరాలు ఈ ఆశ్రమంలో బూడిదలో ఉండిపోవాలని శపించాడు. అవి ఎవరికీ కనిపించవు. రాముని రాకతో వన్నడు శాప విముక్తుడై నిజస్వరూపాన్ని పొందుతాడు. 'రామా! విశ్వామిత్రుడు గౌతముని గుడిలోకి అడుగుపెట్టి అహల్యను శాపం నుండి విముక్తులను చేయమని ఆదేశించాడు.
+తపస్సులో ఉన్న అహల్య, బూడిదతో చుట్టుముట్టబడి, మండుతున్న అగ్ని యొక్క ప్రకాశం వంటిది. రాముడు ఆ మహాత్ముడిని చూశాడు. శ్రీరాముని దర్శనంతో ఆమెకు శాపవిముక్తి లభించింది. అహల్య గౌతములు రాముని యథావిధిగా గౌరవించారు. వారి ఆదరాభిమానాలు అందుకున్న రాముడు విశ్వామిత్రునితో కలిసి లక్ష్మణుడితో కలిసి మిథిలా నగరానికి చేరుకున్నాడు.
+<br><br>
+మిథిలానగర ప్రభువైన జనకమహారాజు వారిని తగిన విధంగా సత్కరించాడు. మితిలో అహల్య గౌతముని పెద్ద కుమారుడు శతానంద రామదర్శనం పొందాడు. తనను పెంచినందుకు తల్లికి కృతజ్ఞతలు తెలిపాడు. ఆ మహానుభావుడైన విశ్వామిత్రుని కృపకు పాత్రులు కావడం విశేషం అని రాముడిని కొనియాడారు. విశ్వామిత్ర మహర్షి అసాధారణ శక్తులను వివరించాడు. శతానంద,
+మరుసటి రోజు ఉదయం జనక విశ్వామిత్రుడు రామలక్ష్మణులను ఆహ్వానించాడు. కర్తవ్యం చేయమని విశ్వామిత్రుడిని ప్రార్థించాడు. అప్పుడు విశ్వామిత్రుడు 'వీరు దశరథ మహారాజు కుమారులు. ప్రపంచ ప్రసిద్ధ హీరోలు. మీకు సమీపంలోని ధనుస్సు రాశిని చూడాలనుకుంటున్నారు. అది చూపించు. అదృష్టవంతులు. వారి ప్రేమ నెరవేరుతుందని చెప్పాడు. అప్పుడు జనకుడు తన వద్ద ఉన్న 'శివధనుస్' చరిత్రను వివరించాడు. యాగం కోసం భూమి దున్నుతుండగా తనకు పసిపాప దొరికిందని, నాగలిలో కనిపించినందున ఆమెకు 'సీత' అని పేరు వచ్చిందని చెబుతూ ఆమెను గొప్ప యోధురాలిని చేయాలనే కోరికను వెల్లడించాడు. శివ ధనుస్సు ఎక్కగలవాడే తగిన భర్త అని సీత చెప్పింది. గతంలో ఎందరో రాజులు వచ్చి శివ విల్లు ఎక్కేందుకు ప్రయత్నించి విఫలమయ్యారని, ఎంత చెప్పినా కదపలేకపోయారని అన్నారు.
+ఇదంతా విన్న విశ్వామిత్రుడు శివుడి ధనుస్సు తీసుకురావాలని కోరాడు. 
+
+            </p>
+        </div>
+    </center>
+    <br>
+    <a href="balakanda9.html"><button class="prev">Previous</button></a>
+    <a href="balakanda11.html"><button class="next">Next</button></a>
+    <br>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BALAKANDA</title>
+    <style>
+        body{
+            margin: 20px 20px 20px 20px;
+            background-image: url("https://i.pinimg.com/originals/31/9f/3b/319f3b9659e2add93c75329770406f49.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.2em;
+            font-size: 3em;
+        }
+        .balakanda {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 6px solid black;
+            border-radius: 25px;
+        }
+        .video{
+            float:right;
+            margin-right: 0.9rem;
+        }
+        .glassy-text {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            color: #000000;
+            font-family: system-ui, sans-serif;
+            line-height: 1.5;
+            max-width: 87%;
+            padding: 1rem 2rem;
+            font-size: 20PX;
+            text-align: justify;
+        }
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        .glassy-text {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(15px);
+          background-color: transparent;
+        }
+        }
+        .languages{
+            float: right;
+            font-size: 17px;
+            border-radius: 15px;
+            opacity: 0.7;
+        }
+        .language{
+            float: right;
+            font-size: 17px;
+        }
+        .next{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: right;
+        }
+        .prev{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: left;
+        }
+        #speakButton{
+            background-color:transparent;
+            border-color: transparent;
+            float:right;
+        }
+        #close{
+            background-color:transparent;
+            border-color: transparent;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <img class="center" src="https://i.pinimg.com/originals/7f/97/f3/7f97f32d8cbd7f89828f1f791daf5e08.png" height="90px" width="380px">
+    <br>
+    <button id="speakButton"><img src="https://img.icons8.com/ios-filled/256/high-volume.png" height="40px" width="40px"></button>
+    <a href="newpage.html"><button id="close"><img src="https://img.icons8.com/ios-glyphs/256/macos-close.png" height="40px" width="40px"></button></button></a>
+    <script>
+        function speakSelectedText() {
+            const selectedText = window.getSelection().toString();
+            const lang = detectLanguage(selectedText);
+            const processedText = processSelectedText(selectedText);
+            const speech = new SpeechSynthesisUtterance(processedText);
+            speech.lang = lang;
+            window.speechSynthesis.speak(speech);
+          }
+          
+          function detectLanguage(text) {
+            // Use a language detection library or API to detect the language of the text
+            // Return the language code for the detected language
+            return 'te-IN'; // Use 'te-IN' for Telugu
+          }
+          
+          function processSelectedText(selectedText) {
+            // Process the selected text and return the result as a string
+            return selectedText.toUpperCase();
+          }
+          
+          const speakButton = document.getElementById('speakButton');
+          speakButton.addEventListener('click', speakSelectedText);
+          </script>
+    <br><br><br><br>
+    <select name="languages" class="languages" onchange="location = this.value;"> 
+        <option value="balakanda9.html">Telugu</option>
+        <option value="balakanda3.html">English</option> 
+    </select> 
+    <label class="language">Choose a language:</label>
+    <br>
+    <br>
+    <center>
+        <div class="glassy-text">
+            <p id="siteContent" style="font-weight: bold;">
+                దశరథుని మాటలకు విశ్వామిత్రుడు అగ్నికి ఆహుతి అయ్యాడు. 'మాట తప్పడం నీలాంటిది కాదు. నేను మీ కోసం సిద్ధంగా ఉంటే, నేను ఖాళీ చేతులతో తిరిగి వెళ్తాను. నిశ్చింతగా ఉండు" అన్నాడు విశ్వామిత్రుడు. పరిస్థితి తీవ్రతను గమనించిన వశిష్ఠ మహర్షి దశరథుని మాట నిలబెట్టుకోమని సలహా ఇచ్చాడు. మాట నిలబెట్టుకోకుంటే చేసిన పుణ్యఫలం నశించిపోతుందని హెచ్చరించాడు. రాముని పంపడానికి ఏమాత్రం సంకోచించలేదు. విశ్వామిత్రుని తర్వాత నానా రకాలుగా నిష్ణాతుడై.. రాముడిని పంపితే మంచి జరుగుతుందని సూచించాడు.
+                దశరథుడు వశిష్ఠుని కోరికకు నమస్కరించాడు. రామలక్ష్మణులను పిలిచాడు. కౌసల్యతో ఆశీర్వదించాడు. ప్రశాంతమైన మనస్సుతో దానిని విశ్వామిత్రునికి అప్పగించాడు.
+                విశ్వామిత్రుడు ధనుర్ధారి రాముడు తోడుగా ఉన్నాడు. నడుస్తున్నాడు లక్ష్మణుడు. సరయునది ఒడ్డున చాలా దూరం ప్రయాణించారు. ముగ్గురూ, అప్పుడు రామ లక్ష్మణులు 'బాల 'అతిబల' విద్యలను ఉపదేశించారు. విశ్వామిత్ర మహర్షి, ఈ ప్రభావాల వల్ల అలసట, ఆకలి దప్పులు లేవు, స్వరూపం తగ్గదు. నిద్రలో ఉన్నా, మరే ఇతర స్థితిలో ఉన్నా దెయ్యాలు ఏమీ చేయలేవు. కొండల్లో నిలబడే వాడు లేడు.
+                రాముడు గురుసేవలో నిమగ్నమయ్యాడు. విశ్వామిత్రుని పాదాలను తాకాడు. వడ్డించారు. గురు సేవ విశేష ఫలితాలను ఇస్తుంది. ఆ రాత్రి సరయునది ఒడ్డున నిద్రించారు.
+                తెల్లవారుతోంది. విశ్వామిత్రుడు రామలక్ష్మణులను నిద్రలేపాడు.                
+<br>
+కౌసల్యా సుప్రజారామ పూర్వసంధ్యా ప్రవర్తతే ఉత్తిష్ఠ నరశార్దూల కర్త్వయం దైవమాహ్నికమ్ ||
+<br>
+(ఓ రామా, కౌసల్యా దేవి కుమారుడా! తూర్పున ఉష్ణ కిరణాలు ప్రసరిస్తున్నాయి. అతను నిద్రలేచి కర్మలు చేసాడు.)
+<br>
+<br>
+గురువాక్యం శిరసావ్కాయ రాముడు, లక్ష్మణుడు కలిసి మళ్లీ ప్రయాణం కొనసాగించాడు. సరయు గంగానది సంగమం చేరుకుంది. అక్కడి విశేషాలను గురుముఖంగా తెలుసుకున్నారు. జ్ఞాన సముపార్జనలో నిరంతర జాగరూకత ఉత్తమ విద్యార్థుల లక్షణం.
+ప్రయాణం కొనసాగుతోంది. వారు 'మలద' మరియు 'కరుష' అనే జనపదాలకు చేరుకున్నారు. ఇంద్రుని దయతో ఈ ప్రాంతాలు ధాన్యంతో సమృద్ధిగా ఉండేవి. అయితే ఈ ప్రాంతాలకు 'తాటాకా' అనే అద్భుత విధ్వంసం సృష్టించింది. పుట్టుకతో వెయ్యి ఏనుగుల బలం ఉన్న ఆమెను ఎవరూ ఎదిరించలేరు. 'అగ్నికి ఇంధనం'లా ఆమె కొడుకు 'మారీచుడు' రగిలిపోతూ ఇంతమందిని పీడిస్తున్నాడు. దుష్టుడైన తాటకుడిని చంపమని రాముడిని అడగండి అన్నాడు విశ్వామిత్రుడు. రాముడు ఒక్క క్షణం మౌనంగా ఉండిపోయాడు. విశ్వామిత్రుడు రాముని భావాలను అర్థం చేసుకున్నాడు. 'మహిళను ఎలా చంపుతారనే సందేహం లేదు. అధర్మపారాయణుడైన తాటకను నీవు సంహరిస్తే, అతడు నీకు 'దోష రాద' అనే కర్తవ్యాన్ని ఇచ్చాడు. వెంటనే రాముడు నిశ్చయించుకుని అంజలి ఘటించాడు. 'నువ్వు చెప్పినట్లు చేయమని మా నాన్నగారు నన్ను ఆదేశించారు. నాకు 'శిరోధార్యము' ఇవ్వమని వారి ఆజ్ఞ, పితృ సంబంధమైన పరిపాలనా శక్తిని చాటింది. అలాగే గురువుగారి ఆజ్ఞను పాటించడం శిష్యునిగా తన కర్తవ్యంగా భావించి తాటకను చంపడానికి ఉద్వేగానికి లోనయ్యాడు.
+రాముడు తన పదునైన బాణాలతో తాటక యొక్క విపరీతమైన చేతులను మందలించాడు. అయితే ఆవేశంతో లక్ష్మణుడు తనపైకి వస్తున్న తాటకి ముక్కు, చెవులు కోసేశాడు. తాటాకుల ఆవేశం రెట్టింపయింది. ఆమె కనిపించకుండా వారిపై రాళ్ల వర్షం కురిపిస్తోంది. విశ్వామిత్రుడు ఇదంతా గమనిస్తున్నాడు. సంధ్య సమీపిస్తోంది. దీనికి ముందు తాటకను స్వర్గానికి పంపాలని ప్రయత్నించాడు. అసురసాధ్య సమయంలో రాక్షసులు గొప్ప శక్తిని పొందుతారు. ఎదుర్కోవడం కష్టం. ఏ మాత్రం ఆలస్యం చేయకుండా రాముడు శబ్దవేది జ్ఞానాన్ని ప్రదర్శించి విలువిద్యను ప్రదర్శించాడు. కొద్దిసేపటికే తాటక నేలపై పడి చనిపోయాడు. రాముడు తాటక వడతో దుష్టుని సంహరించడం ప్రారంభించాడు. ఇంద్రుడు రాముని స్తుతించాడు. విశ్వామిత్ర మహర్షి సంతోషించి రాముడికి అనేక అద్భుతాలను ప్రసాదించాడు. గురువు అనుగ్రహిస్తే ఏమి ఇవ్వలేము? శిష్యుడు ఏమి పొందలేడు?
+విశ్వామిత్రుడు రామలక్ష్మణులతో కలిసి సిద్ధాశ్రమం చేరుకున్నాడు. అది అతని యజ్ఞభూమి. రామలక్ష్మణులు నిరాడంబరులు. యజ్ఞదీక్షను స్వీకరించమని చేతులు జోడించి గురువును ప్రార్థించాడు. మహర్షి క్షమించాడు. అతడు యజ్ఞదీక్షితుడయ్యాడు. మరుసటి రోజు యజ్ఞం ప్రారంభమైంది. ఆరు రోజుల పాటు జరిగే ఈ యజ్ఞం విషయంలో చాలా జాగ్రత్తగా ఉండాలని మునుల రామలక్ష్మణులకు సూచించారు. అయిదు రోజులైంది. రెప్పపాటు లేకుండా యజ్ఞాన్ని కాపాడుతున్నారు. రామ లక్ష్మణ. కర్తవ్యాన్ని నిర్వర్తించడంలో ఎంతో నమ్మకంగా ఉండాలి. అదే ఆఖరి రోజు అన్నట్లుగా యజ్ఞ కుండం నుంచి మంటలు ఎగిసిపడ్డాయి. ఇది రాక్షసుల రాకకు సూచన.
+<br><br>
+మారీచ, సుబాహు అనుచరులతో వచ్చారు. రక్తవర్షంతో యజ్ఞవేదిక పరిసరాలు తడిసి ముద్దయ్యాయి. రాముడు మారీచుడిపై ‘శ్రీశేషువు’ అనే మానవాయుధాన్ని ప్రయోగించాడు. దాని దెబ్బకి మారీచుడు నూరు యోజనాల దూరం విసిరి సముద్రంలో పడిపోయాడు. అతను అపస్మారక స్థితిలో తిరుగుతున్నాడు. మరో నిమిషంలో ‘ఆగ్నేయాస్త్రం’తో సుబాహు ఛాతీని కోసేశాడు. భరతుడు 'వాయాఫ్యారం'తో మిగిలిన రాక్షసులను ఓడించాడు. రాక్షసబాధ తొలగిపోతుంది. యజ్ఞం అంతరాయం లేకుండా జరిగింది. విశ్వామిత్రుడు సంతోషించాడు. సమర్థులైన శిష్యులను చూసి ఏ గురువు సంతోషించడు?
+మరుసటి రోజు ఉదయం రామలక్ష్మణులు విశ్వామిత్రుని ముందు వినయంగా నిలబడ్డారు. ఇంకేం చేయాలని ఆదేశించాడు. విశ్వామిత్రుడు 'ఓ రామా! మిథిలానగర ప్రభువు, ధార్మికుడైన జనక మహారాజు ఒక యజ్ఞం చేయాలని నిర్ణయించుకున్నాడు. అక్కడికి వెళ్దాం. అద్భుతమైన ఇంద్రధనస్సు ఉంది. నువ్వు చూడగలవు. సిద్ధంగా ఉన్నారు. రామ లక్ష్మణులు, మునిని అనుసరించి మిథిలా వైపు ముందుకు సాగుతున్నారు.
+
+            </p>
+        </div>
+    </center>
+    <br>
+    <a href="balakanda8.html"><button class="prev">Previous</button></a>
+    <a href="balakanda10.html"><button class="next">Next</button></a>
+    <br>
+</body>
+</html>

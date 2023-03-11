@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BALAKANDA</title>
+    <style>
+        body{
+            margin: 20px 20px 20px 20px;
+            background-image: url("https://i.pinimg.com/originals/31/9f/3b/319f3b9659e2add93c75329770406f49.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.2em;
+            font-size: 3em;
+        }
+        .balakanda {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 6px solid black;
+            border-radius: 25px;
+        }
+        .video{
+            float:right;
+            margin-right: 0.9rem;
+        }
+        .glassy-text {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            color: #000000;
+            font-family: system-ui, sans-serif;
+            line-height: 1.5;
+            max-width: 87%;
+            padding: 1rem 2rem;
+            font-size: 20PX;
+            text-align: justify;
+        }
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        .glassy-text {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(15px);
+          background-color: transparent;
+        }
+        }
+        .languages{
+            float: right;
+            font-size: 17px;
+            border-radius: 15px;
+            opacity: 0.7;
+        }
+        .language{
+            float: right;
+            font-size: 17px;
+        }
+        .next{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: right;
+        }
+        .prev{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: left;
+        }
+        #speakButton{
+            background-color:transparent;
+            border-color: transparent;
+            float:right;
+        }
+        #close{
+            background-color:transparent;
+            border-color: transparent;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <img class="center" src="https://i.pinimg.com/originals/7f/97/f3/7f97f32d8cbd7f89828f1f791daf5e08.png" height="90px" width="380px">
+    <button id="speakButton"><img src="https://img.icons8.com/ios-filled/256/high-volume.png" height="40px" width="40px"></button>
+    <a href="newpage.html"><button id="close"><img src="https://img.icons8.com/ios-glyphs/256/macos-close.png" height="40px" width="40px"></button></button></a>
+    <script>
+        function speakSelectedText() {
+          const selectedText = window.getSelection().toString();
+          const lang = detectLanguage(selectedText);
+          const processedText = processSelectedText(selectedText);
+          const speech = new SpeechSynthesisUtterance(processedText);
+          speech.lang = lang;
+          window.speechSynthesis.speak(speech);
+        }
+      
+        function detectLanguage(text) {
+          // Use a language detection library or API to detect the language of the text
+          // Return the language code for the detected language
+          return 'IN-en';
+        }
+      
+        function processSelectedText(selectedText) {
+          // Process the selected text and return the result as a string
+          return selectedText.toUpperCase();
+        }
+      
+        const speakButton = document.getElementById('speakButton');
+        speakButton.addEventListener('click', speakSelectedText);
+      </script>
+    <br><br><br><br>
+    <select name="languages" class="languages" onchange="location = this.value;"> 
+        <option value="balakanda4.html">English</option> 
+        <option value="balakanda10.html">Telugu</option>
+    </select> 
+    <label class="language">Choose a language:</label>
+    <br>
+    <br>
+    <center>
+        <div class="glassy-text">
+            <p id="siteContent" style="font-weight: bold;">
+                Kausalyā suprajārāma pūrvasandhyā pravartatē uttiṣṭha naraśārdūla kartvayaṁ daivamāhnikam ||
+                <br>
+                (O Rama, the son of Kausalya Devi! Heat rays are radiating in the east. He woke up and performed the rituals.)
+                <br>
+                Guruvakyam Shirasavkaya Rama, together with Lakshmana, again continued the journey. Sarayu reached the confluence of the Ganges. Gurumukhtah got to know the features there. A characteristic of the best students is constant vigilance in acquiring knowledge.
+The journey is ongoing. They reached the Janapadas of 'Malada' and 'Karusha'. By the grace of Indra these regions were rich in grain. But a fairy called 'Tataka' came to these places and created havoc. No one can resist her who has the strength of a thousand elephants by birth. Like 'fuel to the fire', her son 'Marichudu' is raging and tormenting these people. Ask Rama to kill the wicked Tataka said Vishwamitra. Rama remained silent for a moment. Vishwamitra understood Rama's feelings. 'There is no doubt as to how to kill a woman. If you kill Tataka, who is an adharmaparayana, he has given you the duty of 'dosha raada'. Immediately Rama became determined and became Anjali. 'My father ordered me to do as you said. Their command was to give me 'Shirodharyama' and expressed the paternal power of administration. Also thinking that it is his duty as a disciple to obey the orders of the Guru, Tataka was excited to kill.
+Rama rebuked Tataka's flailing hands with his sharp arrows. However, Lakshmana cut off the nose and ears of Tataka coming at him with rage. Tataka's rage doubled. She was raining stones on them without being seen. Vishwamitra is observing all this. Dusk is approaching. Before this he tried to send Tataka to heaven. Demons gain great power during Asurasadhyaya. Hard to deal with. Without any delay, Rama displayed the knowledge of Shabdavedi and performed the archery. In no time, Tataka fell to the ground and died. Rama started to kill the evil with Tataka Vada. Lord Indra praised Lord Rama. Sage Vishwamitra was pleased and blessed Rama with many miracles. What cannot be given if the Guru grants it? What can a disciple not gain?
+<br><br>
+Vishwamitra accompanied by Ramalakshmana reached Siddashram. That is his yajnabhumi. Ramalakshmana is humble. He joined his hands and prayed to the Guru to accept Yajnadiksha. Maharshi forgave. He became Yagnadikshit. The yajna started the next day. Munula advised Ramalakshman to be very careful about this Yajna which lasts for six days. It's been five days. They are protecting the Yajna without blinking. Rama Lakshmana. One should be so faithful in fulfilling the duty. As if it were the last day, flames shot out from the Yajna Kundam. This is an indication of the arrival of demons.
+Maricha and Subahu came with followers. The surroundings of the Yajnavedi were soaked with blood rain. Rama used the human weapon called 'Sriseshuvu' on Marichudi. Due to its blow, Marichu was thrown a hundred yojanas away and fell into the sea. He is unconscious and whirling around. In another minute, he cut Subahu's chest with 'Agneyastra'. Bharata defeated the rest of the demons with 'Vayaphyaram'. Rakshasabadha is removed. The Yajna was done without interruption. Vishwamitra was happy. What teacher is not happy to see able disciples?
+<br><br>
+The next morning, Ramalakshman stood humbly in front of Vishwamitra. He ordered what else to do. Vishwamitra said 'O Rama! Lord of Mithilanagara, Janaka Maharaja, who was religious, decided to perform a yajna. Let's go there. There is a magnificent rainbow. You will see. Are ready. Rama Lakshmana, following Munin, is advancing towards Mithila.
+Words are moving along with the feet. According to Rama's wish, he explained the antecedents of their lineage. Vishvamitra That night they rested on the banks of Shonanadi. The next day they visited the holy Ganges. He bathed and fulfilled his rites. Rama humbly asked that he wanted to hear the story of Ganga. Vishwamitra heard. Inquisitive disciples, knowledgeable teacher - is there an end to the transmission of knowledge?
+He resolved to give good fortune to his father Sagara's sons who were lying in ashes in the underworld. Bhagirath. There is only one way. Pouring hell over their ashes. But is it a matter of one city to bring down the sky Ganga to the underworld? However, nothing is impossible for determination. Bhagirath is intense
+
+            </p>
+        </div>
+    </center>
+    <br>
+    <a href="balakanda3.html"><button class="prev">Previous</button></a>
+    <a href="balakanda5.html"><button class="next">Next</button></a>
+    <br>
+</body>
+</html>

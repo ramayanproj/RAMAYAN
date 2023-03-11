@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AYODHYAKANDA</title>
+    <style>
+        body{
+            margin: 20px 20px 20px 20px;
+            background-image: url("https://i.pinimg.com/originals/31/9f/3b/319f3b9659e2add93c75329770406f49.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.2em;
+            font-size: 3em;
+        }
+        .balakanda {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 6px solid black;
+            border-radius: 25px;
+        }
+        .video{
+            float:right;
+            margin-right: 0.9rem;
+        }
+        .glassy-text {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+            color: #000000;
+            font-family: system-ui, sans-serif;
+            line-height: 1.5;
+            max-width: 87%;
+            padding: 1rem 2rem;
+            font-size: 20PX;
+            text-align: justify;
+        }
+        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        .glassy-text {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(15px);
+          background-color: transparent;
+        }
+        }
+        .languages{
+            float: right;
+            font-size: 17px;
+            border-radius: 15px;
+            opacity: 0.7;
+        }
+        .language{
+            float: right;
+            font-size: 17px;
+        }
+        .next{
+            background-color: #000000; /* Green */
+            border: dotted;
+            border-radius: 30px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            float: right;
+        }
+        #speakButton{
+            background-color:transparent;
+            border-color: transparent;
+            float:right;
+        }
+        #close{
+            background-color:transparent;
+            border-color: transparent;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <img class="center" src="https://i.pinimg.com/originals/79/3b/3d/793b3d63af94dbf06bb831820119b88f.png" height="90px" width="380px">
+    <br>
+    <a href="ayodhyakandavideo.html"><img class="video" src="https://img.icons8.com/fluency-systems-filled/256/video-clip.png" height="40px" width="40px"></a>
+    <button id="speakButton"><img src="https://img.icons8.com/ios-filled/256/high-volume.png" height="40px" width="40px"></button>
+    <a href="newpage.html"><button id="close"><img src="https://img.icons8.com/ios-glyphs/256/macos-close.png" height="40px" width="40px"></button></button></a>
+    <script>
+        function speakSelectedText() {
+          const selectedText = window.getSelection().toString();
+          const lang = detectLanguage(selectedText);
+          const processedText = processSelectedText(selectedText);
+          const speech = new SpeechSynthesisUtterance(processedText);
+          speech.lang = lang;
+          window.speechSynthesis.speak(speech);
+        }
+      
+        function detectLanguage(text) {
+          // Use a language detection library or API to detect the language of the text
+          // Return the language code for the detected language
+          return 'IN-en';
+        }
+      
+        function processSelectedText(selectedText) {
+          // Process the selected text and return the result as a string
+          return selectedText.toUpperCase();
+        }
+      
+        const speakButton = document.getElementById('speakButton');
+        speakButton.addEventListener('click', speakSelectedText);
+      </script>
+    <br><br><br><br>
+    <select name="languages" class="languages" onchange="location = this.value;"> 
+        <option value="ayodhyakanda.html">English</option> 
+        <option value="ayodhyakanda4.html">Telugu</option> 
+    </select> 
+    <label class="language">Choose a language:</label>
+    <br>
+    <br>
+    <img class="balakanda" src="https://www.vyasaonline.com/wp-content/uploads/2017/11/india-vintage-calendar-print-hindu-god-ram-sita-laxman-bharat-with-khadaau-gngp9-4ce242bd2a4293791e051a7d19c62339.jpg" height="300px" width="400px">
+    <br>
+    <center>
+        <div class="glassy-text">
+            <p id="siteContent" style="font-weight: bold;">
+                Dasharatha loved his sons very much. He felt four arms born from his body. Among these four sons, Bharata and Shatrughnu were anxious because they were abroad. He thinks of them again and again. Dasharatha is very fond of Lord Rama. The reason for that is that Sri Rama is a virtuous sign. Excellent in form and quality. Mahavira He speaks softly. He protects the refugees. One who is free from anger and pride, one who speaks the truth... one who does not desire the riches of the world. He who supports the poor. He used to discuss various matters with wise men and gentlemen without wasting time. He is humble, devoted to his parents and teachers. Laziness, indolence, lack of arts, envy and jealousy. He has affection towards the people... For all these good qualities, Sri Sri Ramudan is not only loved by parents but also by all people.
+The desire of the people to have Lord Rama, who is full of virtues, is their lord - in addition to this, 'How good would it be if Lord Rama was the king while I was still alive? How happy will I be?' Dasharatha is exclaiming. After thinking with the ministers, he decided to make Sri Rama a prince. He summoned the nobles of the kingdom, the people, the vassals and the people. Sri Ram's princely coronation revealed. He said that he would give permission only if everyone likes it. He asked him to think and say if there is anything more beneficial to the people than this. This is what democracy is all about. Everyone in the assembly cheered in support of Sri Rama's coronation.
+<br>
+<br>
+Vashishtha ordered the ministers and officials to make arrangements for the Yauvrajya Pattabhishek festival. Dasharatha summoned Lord Rama. Lord Rama came and saluted his father. Dasharatha took Sri Rama as his elder brother. He sat on the golden throne. 'Rama! You have pleased people with your virtues. So you should crown a prince. Your responsibility is increasing. Need to be more humble. I want Jitendriya's..." he said and enunciated the Rajdharmas. After taking leave from his father, Lord Rama came to his mother Kausalya and received her blessings. As per Vasishtha's order, the Sitarams underwent fasting initiation for the coronation.
+Ayodhya decorated itself for the coronation festival of Sri Rama. The whole city is rejoicing. Seeing this, Manthara's eyes were filled with fire. Aranapudasi Mandhara came along when Kaikeyi came to his in-laws. She ran to Kaikeyi and told her about the coronation. Kaikeyi was overjoyed and gave Manthara a valuable reward for telling the news. Mandhara was stunned. Why are you happy when you should be sad?
+
+            </p>
+        </div>
+    </center>
+    <br>
+    <a href="ayodhyakanda1.html"><button class="next">Next</button></a>
+    <br>
+    <br>
+</body>
+</html>
